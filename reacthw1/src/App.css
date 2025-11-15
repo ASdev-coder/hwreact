@@ -1,0 +1,17 @@
+.intro{
+  color: red;
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.summary{
+  text-align: center;
+  font-family: fantasy;
+  font-size: 30px;
+  
+}
+
+body{
+  background-color: ivory;
+}
