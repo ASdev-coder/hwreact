@@ -9,7 +9,7 @@ import "./LogicalApp.css";
 const LogicalApp = () => {
 
     const [input, setInput] = useState("");
-    const [shoppingItems, setShoppingItems] = useState(list);
+    const [shoppingItems, setShoppingItems] = useState(localStorage.getItem("shoppingItems") ? JSON.parse(localStorage.getItem("shoppingItems")) : list);
     const [isError, setIsError] = useState(false);
     const [allCount, setAllCount] = useState();
 
@@ -39,6 +39,7 @@ const LogicalApp = () => {
         };
 
         setShoppingItems([...shoppingItems, newItem]);
+        localStorage.setItem("shoppingItems", JSON.stringify([...shoppingItems, newItem]));
     }
 
     const incrementCount = (id) => {
@@ -50,6 +51,7 @@ const LogicalApp = () => {
         });
 
         setShoppingItems(newItems);
+        localStorage.setItem("shoppingItems", JSON.stringify(newItems));
     }
 
     const decrementCount = (id) => {
@@ -57,14 +59,19 @@ const LogicalApp = () => {
             if(item.id === id && item.count > 0){
                 return {...item, count: item.count - 1};
             }
+
             return item;
         });
 
+        
         setShoppingItems(newItems);
+        localStorage.setItem("shoppingItems", JSON.stringify(newItems));
     }
 
     const onRemoveItem = (id) => {
         setShoppingItems(shoppingItems.filter(item => item.id !== id));
+
+        localStorage.setItem("shoppingItems", JSON.stringify(shoppingItems.filter(item => item.id !== id)));
     }
 
     return (
