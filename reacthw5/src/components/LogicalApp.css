@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(236, 233, 233);
+}
+
+.logical-app{
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.icon-btn {
+  font-size: 20px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: white;      
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.15s;
+}
+
+.icon-btn:hover {
+  background: #e4e4e4;      
+}
+
+.icon-btn:active {
+  background: #d9d9d9;
+  transform: scale(0.95);       
+}
+
+.shopping-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.activeListItemPart{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.count-part{
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.active-button{
+    cursor: pointer;
+}
