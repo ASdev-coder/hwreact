@@ -4,7 +4,7 @@ import MagicBall from './components/MagicBall';
 
 function App() {
   return (
-    <MagicBall/>
+      <MagicBall />
   );
 }
 
